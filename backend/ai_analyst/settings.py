@@ -103,7 +103,10 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS settings
-CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', 'http://localhost:3000','https://auteraai-seven.vercel.app').split(',')
+CORS_ALLOWED_ORIGINS = os.getenv(
+    'CORS_ALLOWED_ORIGINS',
+    'http://localhost:3000,https://auteraai-seven.vercel.app'
+).split(',')
 CORS_ALLOW_CREDENTIALS = True
 
 # REST Framework settings
