@@ -17,7 +17,10 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-change-this-in-production'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', "analyst-7wio.onrender.com",
+    "auteraai-seven.vercel.app",
+    "localhost",
+    "127.0.0.1").split(',')
 
 # Application definition
 INSTALLED_APPS = [
@@ -100,7 +103,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS settings
-CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', 'http://localhost:3000').split(',')
+CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', 'http://localhost:3000','https://auteraai-seven.vercel.app').split(',')
 CORS_ALLOW_CREDENTIALS = True
 
 # REST Framework settings
